@@ -1,5 +1,5 @@
 # Iris Flower Species Classifier
-# A complete ML workflow including data visualization and model development
+# A  ML workflow including data visualization and model development
 
 import numpy as np
 import pandas as pd
