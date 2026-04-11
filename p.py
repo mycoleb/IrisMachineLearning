@@ -14,11 +14,11 @@ from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
 
-# Set style for visualizations
+# style for visualizations
 plt.style.use('seaborn-v0_8-whitegrid')
 sns.set(font_scale=1.2)
 
-# 1. Load the Iris dataset
+# Load the Iris dataset
 iris = load_iris()
 X = iris.data
 y = iris.target
@@ -26,6 +26,27 @@ feature_names = iris.feature_names
 target_names = iris.target_names
 
 # Create a DataFrame for easier data manipulation
+
+#While making this project I googled "Data Frame" and saw this in an educational article
+
+#A DataFrame (like the one in pandas) makes data manipulation 
+#easier by organizing information into a labeled table of rows 
+#and columns, similar to a spreadsheet but far more powerful. 
+#This structure lets you quickly access, filter, and modify 
+#data using simple, readable commands instead of writing long 
+#loops or complex logic. For example, you can update an entire 
+#column in one line, filter rows based on conditions, or select 
+#specific subsets of data without manually iterating through each 
+#element. It also supports multiple data types in the same table, 
+#making it flexible for real-world datasets.
+
+#Beyond organization, DataFrames provide built-in tools for common data 
+#tasks like merging datasets, grouping and aggregating values, and cleaning 
+#messy data. You can join multiple tables like in SQL, compute summaries 
+#such as averages by category, and handle missing values with simple 
+#functions. This shifts your focus from low-level programming details to 
+#higher-level data analysis, making your code shorter, faster, and easier 
+#to understand—especially when working with large datasets.
 df = pd.DataFrame(X, columns=feature_names)
 df['species'] = pd.Categorical.from_codes(y, target_names)
 
