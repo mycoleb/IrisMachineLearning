@@ -232,7 +232,7 @@ plt.legend(loc='best')
 plt.tight_layout()
 plt.savefig('decision_boundaries.png')
 
-# 6. Save the best model
+# Save the best model
 import joblib
 
 best_model = Pipeline([
@@ -258,17 +258,17 @@ def predict_species(sepal_length, sepal_width, petal_length, petal_width):
     Returns:
     - Predicted species name and probability
     """
-    # Load the model
+    #Load the model
     model = joblib.load('iris_classifier_model.pkl')
     
-    # Create input array
+    #Create input array
     input_data = np.array([[sepal_length, sepal_width, petal_length, petal_width]])
     
-    # Make prediction
+    #Make prediction
     species_id = model.predict(input_data)[0]
     species_name = target_names[species_id]
     
-    # Get probability
+    #Get probability
     probabilities = model.predict_proba(input_data)[0]
     probability = probabilities[species_id]
     
