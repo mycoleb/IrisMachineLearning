@@ -31,7 +31,7 @@ target_names = iris.target_names
 
 #A DataFrame (like the one in pandas) makes data manipulation 
 #easier by organizing information into a labeled table of rows 
-#and columns, similar to a spreadsheet but far more powerful. 
+#and columns, similar to a spreadsheet but a lot more powerful. 
 #This structure lets you quickly access, filter, and modify 
 #data using simple, readable commands instead of writing long 
 #loops or complex logic. For example, you can update an entire 
