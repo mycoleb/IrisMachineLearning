@@ -18,7 +18,7 @@ from sklearn.pipeline import Pipeline
 plt.style.use('seaborn-v0_8-whitegrid')
 sns.set(font_scale=1.2)
 
-# Load the Iris dataset
+# load the Iris dataset
 iris = load_iris()
 X = iris.data
 y = iris.target
